@@ -1,0 +1,12 @@
+{
+  "mode": {
+    "电商客服": "online_shop_robot",
+    "运营商客服": "tele_robot",
+    "银行客服": "bank_robot"
+  },
+  "quick_btn": {
+    "online_shop_robot": ["退换货", "投诉", "物流查询", "催发货", "结束服务"],
+    "tele_robot": ["话费查询", "话费充值", "本月账单", "结束服务"],
+    "bank_robot": ["余额查询", "存款", "取款", "结束服务"]
+  }
+}

@@ -1,0 +1,8 @@
+tele.txt
+..\\script\\bank_robot.txt
+.\\script\\tele_robot.txt
+online_shop_robot.txt
+./script/bank_robot
+../script/cdesa.json
+./data/bank_robot.json
+data/bank_robot.json

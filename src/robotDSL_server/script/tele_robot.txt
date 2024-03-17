@@ -1,0 +1,58 @@
+states
+    Welcome
+    Service
+    Cost
+    Charge
+    Bill
+    Silence
+    Default
+    Exit
+end
+
+state Welcome
+    speak "用户：" + $name + "，客服机器人为您服务！有什么可以帮到您的呢？"
+    goto Service
+end
+
+state Service
+    speak "请输入您需要的服务："
+    listen 30
+    branch 话费查询 Cost
+    branch 话费充值 Charge
+    branch 本月账单 Bill
+    branch 结束服务 Exit
+    branch #silence Silence
+    branch #other Default
+end
+
+state Cost
+    speak "您的话费余额为:" + $money + "元"
+    goto Service
+end
+
+state Charge
+    speak "请输入充值金额："
+    listen 20
+    speak "充值成功！"
+    goto Service
+end
+
+state Bill
+    speak "您本月已花费:" + $month_cost + "元"
+    goto Service
+end
+
+state Silence
+    speak "听不清，请您大声一点可以吗？"
+    goto Service
+end
+
+state Default
+    speak "对不起，我不理解您的意思。"
+    goto Service
+end
+
+state Exit
+    speak "本次服务结束，期待您的五星好评！"
+    exit
+end

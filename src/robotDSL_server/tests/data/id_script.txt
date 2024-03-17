@@ -1,0 +1,8 @@
+1 online_shop_robot
+2 tele_robot
+3 bank_robot
+4 bank
+5 online
+65 tele_robot
+aaa bank_robot
+e32 online_shop_robot

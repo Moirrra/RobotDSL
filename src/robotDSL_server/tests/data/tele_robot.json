@@ -1,0 +1,54 @@
+{
+  "1": {
+      "name": "AAA",
+      "money": 200,
+      "month_cost": 99
+    },
+  "2": {
+    "name": "ax",
+    "money": 2500,
+    "month_cost": 199
+  },
+  "3": {
+    "name": "fool",
+    "money": 233,
+    "month_cost": 320.0
+  },
+  "4": {
+    "name": "efsvd",
+    "money": 106.3,
+    "month_cost": 46
+  },
+  "5": {
+    "name": "34re3",
+    "money": -8.9,
+    "month_cost": 75
+  },
+  "6": {
+    "name": "Gww",
+    "money": -3,
+    "month_cost": 101.5
+  },
+  "7": {
+    "name": "小明",
+    "money": 0.01,
+    "month_cost": 30
+  },
+  "8": {
+    "name": "最终章",
+    "money": 20.1,
+    "month_cost": 8.8
+
+  },
+  "9": {
+    "name": "2021UP",
+    "money": 39,
+    "month_cost": 66.6
+
+  },
+  "10": {
+    "name": "young",
+    "money": 1.5,
+    "month_cost": 15
+  }
+}

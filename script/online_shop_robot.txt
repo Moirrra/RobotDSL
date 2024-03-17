@@ -1,0 +1,72 @@
+states
+    Welcome
+    Service
+    Refund
+    Complain
+    Search
+    Consign
+    Silence
+    Default
+    Exit
+end
+
+state Welcome
+    speak "用户：" + $name + "，客服机器人为您服务！有什么可以帮到您的呢？"
+    goto Service
+end
+
+state Service
+    speak "请输入您需要的服务："
+    listen 30
+    branch 退换货 Refund
+    branch 投诉 Complain
+    branch 物流查询 Search
+    branch 催发货 Consign
+    branch 结束服务 Exit
+    branch #silence Silence
+    branch #other Default
+end
+
+state Refund
+    speak "请输入订单号："
+    listen 20
+    speak "您已成功退换货。"
+    goto Service
+end
+
+state Complain
+    speak "您的意见是我们改进工作的动力"
+    listen 20
+    speak "我们后续会对您的建议进行处理，谢谢！"
+    goto Service
+end
+
+state Search
+    speak "请输入订单号："
+    listen 30
+    speak "您的物流状态为：" + $order.answer.state + ",物流：" + $order.answer.logistics
+    goto Service
+end
+
+state Consign
+    speak "请输入订单号："
+    listen 30
+    speak "已经催促店家发货啦，请耐心等待！"
+    goto Service
+end
+
+state Silence
+    speak "听不清，请您大声一点可以吗？"
+    goto Service
+end
+
+state Default
+    speak "对不起，我不理解您的意思。"
+    goto Service
+end
+
+state Exit
+    speak "本次服务结束，期待您的五星好评！"
+    exit
+end
+
